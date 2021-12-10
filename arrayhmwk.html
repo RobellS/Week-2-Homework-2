@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Homework</title>
+<h1>Array Homework</h1>
+</head>
+<body>
+
+
+<h2 id=question1>Questions #1: Write a program to add up all the elements of a number array.</h2>
+<p id=answer1>Answer #1 goes here</p>
+
+
+<h2 id=question2>Question #2: Write a program to look for the user input in an array. When it finds the first occurrence, display the value and the index of that value.</h2>
+<p id=answer2>Answer #2 goes here</p>
+
+
+<h2 id=question3>Question #3: Write a program to find the longest element in a string array.</h2>
+<p id=answer3>Answer #3 goes here</p>
+
+
+<script>
+
+    let arr1 = [1,3,12,35,57,101,273,345,654,1001]
+    let arr2 = ["cow", "dog", "rabbit", "cat", "sheep", "horse"]
+
+//---------------------------------------Question 1----------------------------------------------//
+
+const[a,b,c,d,e,f] = arr1
+let total = a+b+c+d+e+f
+
+
+document.getElementById("answer1").innerHTML=`The total of the array is ${total}.`
+
+//---------------------------------------Question #2--------------------------------------------//
+
+// let userinput=prompt('Enter number here: ')
+// let nummatch = arr1.findIndex(num => num==userinput)
+
+// document.getElementById("answer2").innerHTML=`${userinput} was found at index ${nummatch}.`
+
+//----------------------------------Question #2a(using string array)----------------------------//
+
+let userinput2=prompt("Choose to searh for cow, dog, rabbit, cat, sheep, or horse: ").toLowerCase()
+let inputmatch = arr2.findIndex(e => e == userinput2)
+
+
+document.getElementById("answer2").innerHTML=`${userinput2} was found at index ${inputmatch}.`
+
+//---------------------------------------Question #3--------------------------------------------//
+
+let longest = arr2[0]
+
+for (let i=0; i <arr2.length; i++)
+{
+    if (longest.length<arr2[i].length)
+        longest = arr2[i];  
+}
+document.getElementById("answer3").innerHTML=`The longest object of the array (cow, dog, rabbit, cat, sheep, and horse) is ${longest}.`
+
+</script>
+
+</body>
+</html>
